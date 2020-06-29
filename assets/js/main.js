@@ -9,30 +9,38 @@ const closeDescriptionButtons = document.querySelectorAll('[data-close-button]')
 const overlay = document.getElementById('overlay');
 
 var currentDescription;
+var currentButton;
 
-accueil.className = "active-button";
+//Init navbar
+activeBtn(accueil);
+currentButton = accueil;
 
-accueil.onclick = function(){
-	for (let j = buttons.length - 1; j >= 0; j--) {
-		buttons[j].className = "navigation-button";
+//Activation des boutons de la nav bar
+for (var i = buttons.length - 1; i >= 0; i--) {
+	let btn = buttons[i];
+	btn.onclick = function() {
+		updateNavBar(btn);
 	}
-	accueil.className = "active-button";
 }
 
-jeux.onclick = function(){
-	for (let j = buttons.length - 1; j >= 0; j--) {
-		buttons[j].className = "navigation-button";
-	}
-	jeux.className = "active-button";
+function updateNavBar(button){
+	deactiveBtn(currentButton);
+	activeBtn(button);
+	currentButton = button
 }
 
-apropos.onclick = function(){
-	for (let j = buttons.length - 1; j >= 0; j--) {
-		buttons[j].className = "navigation-button";
-	}
-	apropos.className = "active-button";
+function activeBtn(button){
+	button.classList.remove("navigate");
+	button.classList.add("active");
 }
 
+function deactiveBtn(button){
+	button.classList.remove("active");
+	button.classList.add("navigate");
+}
+
+
+//Ouverture et fermertures des popins sur l'ecran des jeux
 for (var i = openDescriptionButtons.length - 1; i >= 0; i--) {
 	const descirptionBtn = openDescriptionButtons[i];
 
@@ -68,3 +76,38 @@ function closeDescription(){
 	currentDescription.classList.remove('active');
 	overlay.classList.remove('active');
 }
+
+//Instantiation des jeux sur la page de sélection
+
+const gamesData = [
+	{
+		name: "Bug Jungle",
+		image: "../../images/bugjungle_vignette.png",
+	},
+	{
+		name: "Psycho Defender",
+		image: "../../images/psychodfender_vignette.png",
+	},
+	{
+		name: "Bug Jungle",
+		image: "../../images/bugjungle_vignette.png",
+	},
+	{
+		name: "Bug Jungle",
+		image: "../../images/bugjungle_vignette.png",
+	},
+	{
+		name: "Bug Jungle",
+		image: "../../images/bugjungle_vignette.png",
+	},
+	{
+		name: "Bug Jungle",
+		image: "../../images/bugjungle_vignette.png",
+	},
+	{
+		name: "Bug Jungle",
+		image: "../../images/bugjungle_vignette.png",
+	}
+]
+
+const gameContainer = document.getElementById('jeux-content');
