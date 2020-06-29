@@ -513,15 +513,51 @@ footer {
     z-index: -1;
 }
 
-#background-gradient{
-	position: fixed; 
-	width: 100%;
-	height: 100%;
-	left : 0px;
-	z-index: -100;
+@media (min-aspect-ratio: 1/1){
+	#background-gradient{
+		width: 150vw;
+		height: 150vw;
 
-	background:linear-gradient(to top, #3723EC 5%, #B6F9B1 100%);
-	background-color:#3723EC;
+		position: fixed; 
+		z-index: -100;
+
+	  	top: 50%;
+	  	left: 50%;
+	  	transform: translate(-50%, -50%);
+
+	  	border-radius: 50%;
+
+		animation: animate 10s ease-in-out infinite;
+		background:linear-gradient(to top, #3723EC 15%, #B6F9B1 75%);
+	}
+}
+
+@media (max-aspect-ratio: 1/1){
+	#background-gradient{
+		width: 150vh;
+		height: 150vh;
+
+		position: fixed; 
+		z-index: -100;
+
+	  	top: 50%;
+	  	left: 50%;
+	  	transform: translate(-50%, -50%);
+
+	  	border-radius: 50%;
+
+		animation: animate 10s ease-in-out infinite;
+		background:linear-gradient(to top, #3723EC 15%, #B6F9B1 75%);
+	}
+}
+
+@keyframes animate{
+	0%{
+		transform: translate(-50%, -50%) rotateZ(0deg);
+	}
+	100%{
+		transform:translate(-50%, -50%) rotateZ(360deg);
+	}
 }
 /*-----------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------*/

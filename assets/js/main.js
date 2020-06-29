@@ -12,33 +12,33 @@ var currentDescription;
 var currentButton;
 
 //Init navbar
-activeBtn(accueil);
+updateNavBtn(accueil, false);
 currentButton = accueil;
 
 //Activation des boutons de la nav bar
 for (var i = buttons.length - 1; i >= 0; i--) {
 	let btn = buttons[i];
 	btn.onclick = function() {
-		updateNavBar(btn);
+		switchNavBarBtn(btn);
 	}
 }
 
-function updateNavBar(button){
-	deactiveBtn(currentButton);
-	activeBtn(button);
+function switchNavBarBtn(button){
+	updateNavBtn(currentButton, true);
+	updateNavBtn(button, false);
 	currentButton = button
 }
 
-function activeBtn(button){
-	button.classList.remove("navigate");
-	button.classList.add("active");
+function updateNavBtn(button, isActive = false){
+	if (!isActive){
+		button.classList.remove("navigate");
+		button.classList.add("active");
+	}
+	else {
+		button.classList.remove("active");
+		button.classList.add("navigate");
+	}
 }
-
-function deactiveBtn(button){
-	button.classList.remove("active");
-	button.classList.add("navigate");
-}
-
 
 //Ouverture et fermertures des popins sur l'ecran des jeux
 for (var i = openDescriptionButtons.length - 1; i >= 0; i--) {
