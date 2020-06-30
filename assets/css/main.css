@@ -407,8 +407,9 @@ body {
 	background-color: rgba(87, 55, 105, 0.59);
 	top: 215vh;
 	margin-bottom: 13vh;
-
+/*
 	display: flex;
+*/
 }
 
 #apropos-content img{
@@ -421,10 +422,11 @@ body {
 
 #apropos-content p{
 
-	font-size: 30px;
+	font-size: 20px;
 	color: #f5f5f5;
 	margin-top: 5%;
 	margin-right: 5%;
+	margin-left: 5%;
 }
 
 /*-----------------------------------------------------------------------*/
