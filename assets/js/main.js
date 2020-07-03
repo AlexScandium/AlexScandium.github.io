@@ -29,7 +29,7 @@ function switchNavBarBtn(button){
 	currentButton = button
 }
 
-function updateNavBtn(button, isActive = false){
+function updateNavBtn(button, isActive){
 	if (!isActive){
 		button.classList.remove("navigate");
 		button.classList.add("active");
@@ -68,6 +68,7 @@ function openDescription(description){
 	currentDescription = description;
 	description.classList.add('active');
 	overlay.classList.add('active');
+	reloadVideos();
 }
 
 function closeDescription(){
@@ -75,6 +76,8 @@ function closeDescription(){
 
 	currentDescription.classList.remove('active');
 	overlay.classList.remove('active');
+
+	stopVideos();
 }
 
 //Instantiation des jeux sur la page de sélection

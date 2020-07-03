@@ -322,6 +322,10 @@ body {
 	z-index: 10;
 }
 
+.game-description.active{
+	transform: translate(-50%, -50%) scale(1);
+}
+
 .description-content{
 	
 	padding: 50px;
@@ -331,15 +335,11 @@ body {
 .game-description-header{
 	padding: 10px 15px;
 
-	display: flex;
-	justify-content: space-between;
+	display: inline-flex;
+	justify-content: center;
 	align-items: center;
-
+	width: 100%;
 	border-bottom: 5px solid black;
-}
-
-.game-description.active{
-	transform: translate(-50%, -50%) scale(1);
 }
 
 .close-button{
@@ -349,10 +349,33 @@ body {
 	background: none;
 	font-size: 1.25rem;
 	font-weight: bold;
+
+	position: fixed;
+	right: 5%;
 }
 
 .game-descirption-body{
 	padding: 5% 15%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.primary-infos{
+	display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.primary-infos p{
+	width: 40%;
+    text-align: center;
+}
+
+.game-descirption-body iframe{
+	width: 100%;
+	height: 400px;
 }
 
 ::-webkit-scrollbar {
@@ -406,7 +429,7 @@ body {
 	height: 72vh;
 	background-color: rgba(87, 55, 105, 0.59);
 	top: 215vh;
-	margin-bottom: 13vh;
+	margin-bottom: 130vh;
 }
 
 #apropos-content img{
@@ -423,6 +446,11 @@ body {
 	margin-top: 5%;
 	margin-right: 5%;
 	margin-left: 5%;
+}
+
+#adjust-page{
+	width: 100vw;
+	height: 1000vh;
 }
 
 /*-----------------------------------------------------------------------*/
