@@ -1,7 +1,6 @@
 .w3-display-container{
 	margin-bottom: 10px;
 	width: 100%;
-
 }
 
 .button-container{
@@ -11,7 +10,10 @@
 	justify-content: center;
 }
 
+.slidesGame4{
+	max-height: 500px;
+}
 
-.mySlides1 .mySlides2 .mySlides3 {
+.mySlides1 .mySlides2 .mySlides3 .slidesGame4 {
 	display:none;
 }

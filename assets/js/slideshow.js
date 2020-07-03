@@ -1,7 +1,11 @@
-var slideIndex = [1,1];
-var slideId = ["mySlides1", "mySlides2","mySlides3"]
-showDivs(1, 0);
-showDivs(1, 1);
+var slideId = ["mySlides1", "mySlides2","mySlides3","slidesGame4"]
+
+var slideIndex;
+slideIndex = new Array(slideId.length);
+for (let j = slideIndex.length - 1; j >= 0; j--) {
+	slideIndex[j] = 1;
+	showDivs(1,j);
+}
 
 function plusDivs(n, no) {
   showDivs(slideIndex[no] += n, no);
