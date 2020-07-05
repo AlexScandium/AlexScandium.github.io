@@ -1,4 +1,4 @@
-var slideId = ["mySlides1", "mySlides2","mySlides3","slidesGame4"]
+var slideId = ["mySlides1", "mySlides2","mySlides3","slidesGame4", "slidesGame5"]
 
 var slideIndex;
 slideIndex = new Array(slideId.length);
