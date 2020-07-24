@@ -1,4 +1,4 @@
-@media (min-width: 960px){
+@media (min-aspect-ratio: 1/1){
 
 	#triangle-right, #triangle-left{
 		position: fixed;

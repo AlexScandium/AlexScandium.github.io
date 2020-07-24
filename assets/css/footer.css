@@ -12,8 +12,10 @@ footer {
 }
 
 #infos-footer-area{
-	display:  flex;
 	position: relative;
+	display:  flex;
+	height: 100%;
+    align-items: center;
 }
 
 #contact-footer{
@@ -28,7 +30,11 @@ footer {
 	#infos-footer-area{
 		justify-content: space-around;
 		margin-left: 28vw;
+	}
 
+
+	footer p{
+		font-size: 2vh;
 	}
 }
 
@@ -39,6 +45,7 @@ footer {
 
 	footer p{
 		margin: 0;
+		font-size: 2vh;
 	}
 
 	#infos-footer-area{
