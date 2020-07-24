@@ -2,85 +2,84 @@
 	position: relative;
 
 	width: 70vw;
-	height: 72vh;
+	height: 70vh;
 	background-color: rgba(87, 55, 105, 0.59);
 	top: 15vh;
+/*	top: 15rem;*/
+	left: 12.5vw;
 
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
 
-	left: 12.5vw;
+
 }
 
-#p1-Intro, #p1-Nmae, #p1-Title{
-	width: 80%;
-}
 
-#p1-Intro, #p1-Title{
-	font-family: "Julius Sans One";
-	font-size: 0.5em;
-	text-align: center;
-	color: #f5f5f5;
-}
-
-#p1-Intro{
-	font-size: 45px;
-	margin: 0px;
-}
-
-#p1-Name{
-	font-family: "Montserrat";
-	font-size: 100px;
-	text-align: center;
-	margin: 0px;
-	color: #f5f5f5;
-}
-
-#p1-Title{
-	margin: 0px;
-	font-size: 60px;
-}
-
-.link-area{
-	margin-left: auto;
-	margin-right: auto;
-
-	display: flex;
-}
-
-@media(max-width: 1350px){
-		#p1-Title{
-		font-size: 45px;
+@media (min-aspect-ratio: 1/1){
+	#p1-Intro, #p1-Nmae, #p1-Title{
+		width: 80%;
 	}
+
+	#p1-Intro, #p1-Title{
+		font-family: "Julius Sans One";
+		font-size: 3vw;
+		margin: 0px;
+		text-align: center;
+		color: #f5f5f5;
+	}
+
+	#p1-Name{
+		font-family: "Montserrat";
+		font-size: 5vw;
+		text-align: center;
+		margin: 0px;
+		color: #f5f5f5;
+	}
+
+	.link-area{
+		width: 30vw;
+	}
+
 }
 
-@media (max-width: 1100px){
+@media (max-aspect-ratio: 1/1){
+	#accueil-content{
+		height: 72vh;
+	}
+
+	#p1-Intro, #p1-Nmae, #p1-Title{
+		width: 95%;
+	}
+
+	#p1-Intro, #p1-Title{
+		font-family: "Julius Sans One";
+		font-size: 3vh;
+		margin: 0px;
+		text-align: center;
+		color: #f5f5f5;
+	}
+
 	#p1-Intro{
-
+		padding-top: 10vh;
 	}
+
 	#p1-Name{
-		font-size: 85px;
-	}
-	#p1-Title{
-		font-size: 40px;
-	}
-}
-
-@media (max-width: 1010px){
-	#p1-Name{
-		font-size: 75px;
-	}
-	#p1-Title{
-		font-size: 35px;
+		font-family: "Montserrat";
+		font-size: 4.5vh;
+		text-align: center;
+		margin: 0px;
+		color: #f5f5f5;
 	}
 
+	.link-area{
+		width: 30vh;
+		padding-bottom: 6vh;
+	}
 }
 
 .link-area{
-	width: 30%;
-	height: 10%;
 	display: flex;
 
 	justify-content: space-around;
@@ -94,8 +93,8 @@
 }
 
 .icon-link{
-	min-width: 50px;
-	width: 30%;
+	min-width: 30px;
+	width: 5vmax;
 	margin: 0px;
 	transition: all 0.2s;
 }
