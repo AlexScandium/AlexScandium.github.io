@@ -1,50 +1,45 @@
 @media (min-width: 960px){
-	#triangle-right {
-	    position: fixed;
-	    right: 0;
-	    width: 0;
+
+	#triangle-right, #triangle-left{
+		position: fixed;
+		width: 0;
 	    height: 0;
+	    z-index: 0;
+	}
+
+	#triangle-right {
+	    right: 0;
 	    border-bottom: 100vh solid #4a3298;
 	    border-left: 12.5vw solid transparent;
-	    z-index: 0;
+	   
 	}
 
 	#triangle-left {
-	    position: fixed;
-	    width: 0;
-	    height: 0;
 	    left: 0px;
 	    border-top: 100vh solid #4a3298;
 	    border-right: 12.5vw solid transparent;
-	    z-index: 0;
 	}
 }
 
-#rectangle-top {
+#rectangle-top, #rectangle-bottom{
     background-color: #4a3298;
     position: fixed;
-    top: 0;
     left:0px;
     width: 100%;
+    z-index: 1;	
+}
+
+#rectangle-top {
+    top: 0;
     height: 12.5vh;
-    z-index: 1;
 }
 
 #rectangle-bottom {
-    background-color: #4a3298;
-    position: fixed;
     bottom: 0;
-    left:0px;
-    width: 100%;
     height: 10vh;
-    z-index: 1;
 }
 
-@media (min-aspect-ratio: 1/1){
-	#background-gradient{
-		width: 150vw;
-		height: 150vw;
-
+#background-gradient{
 		position: fixed; 
 		z-index: -100;
 
@@ -56,25 +51,19 @@
 
 		animation: animate 10s ease-in-out infinite;
 		background:linear-gradient(to top, #3723EC 15%, #B6F9B1 75%);
+}
+
+@media (min-aspect-ratio: 1/1){
+	#background-gradient{
+		width: 175vw;
+		height: 175vw;
 	}
 }
 
 @media (max-aspect-ratio: 1/1){
 	#background-gradient{
-		width: 150vh;
-		height: 150vh;
-
-		position: fixed; 
-		z-index: -100;
-
-	  	top: 50%;
-	  	left: 50%;
-	  	transform: translate(-50%, -50%);
-
-	  	border-radius: 50%;
-
-		animation: animate 10s ease-in-out infinite;
-		background:linear-gradient(to top, #3723EC 15%, #B6F9B1 75%);
+		width: 175vh;
+		height: 175vh;
 	}
 }
 
