@@ -36,11 +36,6 @@ body  {
 /*-----------------------------------------------------------------------*/
 
 .page-content{
-/*	position: absolute;
-	width: 70%;
-	height: 110%;
-	left : 15%;*/
-
 	z-index: -50;
 
 	display: flex;
@@ -60,8 +55,3 @@ body  {
 #A-PROPOS{
 	top: 30vh;
 }
-
-/*#adjust-page{
-	width: 100vw;
-	height: 1000vh;
-}*/
