@@ -1,0 +1,28 @@
+#apropos-content{
+	position: relative;
+
+	width: 70vw;
+	height: 72vh;
+	background-color: rgba(87, 55, 105, 0.59);
+	top: 45vh;
+	margin-bottom: 12.5vh;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+#apropos-content img{
+	width: 275px;
+	height: 275px;
+	border-radius: 50%;
+	float: left;
+	margin: 5% 20px 30px 30px;
+}
+
+#apropos-content p{
+	font-size: 20px;
+	color: #f5f5f5;
+	margin-top: 5%;
+	margin-right: 5%;
+	margin-left: 5%;
+}
