@@ -58,9 +58,9 @@ for (var i = closeDescriptionButtons.length - 1; i >= 0; i--) {
 	}
 }
 
-overlay.onclick = function(){
-	closeDescription();
-}
+// overlay.onclick = function(){
+// 	closeDescription();
+// }
 
 function openDescription(description){
 	if (description == null) return;
