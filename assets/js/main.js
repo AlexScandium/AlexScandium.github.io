@@ -1,8 +1,14 @@
+/*------------PROPERTIES--------------*/
+
 const accueil = document.getElementById('accueil-button');
 const jeux = document.getElementById('jeux-button');
 const apropos = document.getElementById('apropos-button');
 
 const buttons = new Array(accueil,jeux,apropos);
+
+const accueilContent = document.getElementById( 'accueil-content' );
+const jeuxContent = document.getElementById( 'jeux-content' );
+const aproposContent = document.getElementById( 'apropos-content' );
 
 const openDescriptionButtons = document.getElementsByClassName('gameiconarea');
 const closeDescriptionButtons = document.querySelectorAll('[data-close-button]');
@@ -11,11 +17,15 @@ const overlay = document.getElementById('overlay');
 var currentDescription;
 var currentButton;
 
+/*---------INIT HTML ELEMENTS---------*/
+
 //Init navbar
-updateNavBtn(accueil, false);
+setActiveNavBtn(accueil, false);
 currentButton = accueil;
 
-//Activation des boutons de la nav bar
+/*-----------INIT LISTENERS-----------*/
+
+//Init navbar button
 for (var i = buttons.length - 1; i >= 0; i--) {
 	let btn = buttons[i];
 	btn.onclick = function() {
@@ -23,6 +33,40 @@ for (var i = buttons.length - 1; i >= 0; i--) {
 	}
 }
 
+//Init navbar update on scroll
+document.addEventListener( 'scroll', event => {
+  activeButtonByContent(accueilContent,accueil);
+  activeButtonByContent(jeuxContent,jeux);
+  activeButtonByContent(aproposContent,apropos);
+});
+
+//Init popins openning
+for (var i = openDescriptionButtons.length - 1; i >= 0; i--) {
+	const descirptionBtn = openDescriptionButtons[i];
+
+	descirptionBtn.onclick = function(){
+		let description = document.querySelector(descirptionBtn.dataset.modalTarget);
+		openDescription(description);
+	}
+}
+
+//Init popins closing
+for (var i = closeDescriptionButtons.length - 1; i >= 0; i--) {
+	const closeBtn = closeDescriptionButtons[i];
+
+	closeBtn.onclick = function(){
+		closeDescription();
+	}
+}
+
+//Init overlay for closing popin
+overlay.onclick = function(){
+	closeDescription();
+}
+
+/*-------------METHODS----------------*/
+
+//Active or Deactive the scrolling of the page
 function setScroll(bool){
 	if (bool){
 		document.body.classList.add("active");
@@ -32,13 +76,15 @@ function setScroll(bool){
 	}
 }
 
+//Switch to a new active button and deactivate the previous one
 function switchNavBarBtn(button){
-	updateNavBtn(currentButton, true);
-	updateNavBtn(button, false);
+	setActiveNavBtn(currentButton, true);
+	setActiveNavBtn(button, false);
 	currentButton = button
 }
 
-function updateNavBtn(button, isActive){
+//Active or deactive the button
+function setActiveNavBtn(button, isActive){
 	if (!isActive){
 		button.classList.remove("navigate");
 		button.classList.add("active");
@@ -49,28 +95,19 @@ function updateNavBtn(button, isActive){
 	}
 }
 
-//Ouverture et fermertures des popins sur l'ecran des jeux
-for (var i = openDescriptionButtons.length - 1; i >= 0; i--) {
-	const descirptionBtn = openDescriptionButtons[i];
-
-	descirptionBtn.onclick = function(){
-		let description = document.querySelector(descirptionBtn.dataset.modalTarget);
-		openDescription(description);
-	}
+//Check if an element is in the viewport
+function inViewportMiddle(element){
+	let rect = element.getBoundingClientRect();
+	return !(rect.top > innerHeight/3 || rect.bottom < 0);
 }
 
-for (var i = closeDescriptionButtons.length - 1; i >= 0; i--) {
-	const closeBtn = closeDescriptionButtons[i];
-
-	closeBtn.onclick = function(){
-		closeDescription();
-	}
+//Active the current button corresponding to the main content on the viewport
+function activeButtonByContent(content, btn){
+	if( inViewportMiddle(content) )
+		switchNavBarBtn(btn);
 }
 
-overlay.onclick = function(){
-	closeDescription();
-}
-
+//Open a popin
 function openDescription(description){
 	if (description == null) return;
 
@@ -81,6 +118,7 @@ function openDescription(description){
 	// reloadVideos();
 }
 
+//Close a popin
 function closeDescription(){
 	if (currentDescription == null) return;
 
@@ -89,38 +127,3 @@ function closeDescription(){
 	setScroll(true);
 	// stopVideos();
 }
-
-//Instantiation des jeux sur la page de sélection
-
-const gamesData = [
-	{
-		name: "Bug Jungle",
-		image: "../../images/bugjungle_vignette.png",
-	},
-	{
-		name: "Psycho Defender",
-		image: "../../images/psychodfender_vignette.png",
-	},
-	{
-		name: "Bug Jungle",
-		image: "../../images/bugjungle_vignette.png",
-	},
-	{
-		name: "Bug Jungle",
-		image: "../../images/bugjungle_vignette.png",
-	},
-	{
-		name: "Bug Jungle",
-		image: "../../images/bugjungle_vignette.png",
-	},
-	{
-		name: "Bug Jungle",
-		image: "../../images/bugjungle_vignette.png",
-	},
-	{
-		name: "Bug Jungle",
-		image: "../../images/bugjungle_vignette.png",
-	}
-]
-
-const gameContainer = document.getElementById('jeux-content');
