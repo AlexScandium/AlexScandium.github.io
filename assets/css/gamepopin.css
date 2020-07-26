@@ -160,21 +160,50 @@
 
 /*--------SLIDESHOW------------*/
 .w3-display-container{
-	margin-bottom: 10px;
+	position: relative;
 	width: 100%;
+	height: 20%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.slideshowImagesContainer{
+	position: relative;
+	border: 0.5vmax solid #f5f5f5;
+	width: 70vw;
+	height: 40vw;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .button-container{
-	position: relative;
+	position: absolute;
 	width: 100%;
+	height: 100%;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
+
 }
 
-.slidesGame4 .mySlides7{
-	max-height: 500px;
+.button-container button{
+	opacity: 0.8;
+	width: 5vw;
+	font-size: 1.8vmax;
+	font-weight:bold;
+	border-style: none;
 }
 
-.mySlides1 .mySlides2 .mySlides3 .slidesGame4 .slidesGame5 .mySlides6 {
-	display:none;
+.button-container button:hover{
+	background-color: grey;
+}
+
+
+.mySlides1, .mySlides2, .mySlides3, .slidesGame4, .slidesGame5, .mySlides6, .mySlides7{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	background-color: #f5f5f5;
 }
