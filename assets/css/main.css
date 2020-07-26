@@ -8,7 +8,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 /* font-family: 'Montserrat', sans-serif; */
 
-@import url('slideshow.css');
 @import url('navbar.css');
 @import url('homecontent.css');
 @import url('gamepopin.css');
@@ -22,14 +21,40 @@ html{
 }
 
 body  {
-	overflow-x: hidden;
 	font-family: "Lato", sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+  max-height: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+	background: red;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+	background: pink;
+}
+
+::-webkit-scrollbar-track{
+	background: grey;
+	border-radius: 10px;
+	line-height: 10px;
+}
 
 						/* Contenu de la page */
 /*-----------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------*/
+
+.scroll{
+	overflow: hidden;
+}
+
+.scroll.active{
+	overflow-y: visible;
+}
 
 .page-content{
 	display: flex;

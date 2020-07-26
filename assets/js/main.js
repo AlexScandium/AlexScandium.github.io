@@ -4,7 +4,7 @@ const apropos = document.getElementById('apropos-button');
 
 const buttons = new Array(accueil,jeux,apropos);
 
-const openDescriptionButtons = document.getElementsByClassName('game-icon');
+const openDescriptionButtons = document.getElementsByClassName('gameiconarea');
 const closeDescriptionButtons = document.querySelectorAll('[data-close-button]');
 const overlay = document.getElementById('overlay');
 
@@ -20,6 +20,15 @@ for (var i = buttons.length - 1; i >= 0; i--) {
 	let btn = buttons[i];
 	btn.onclick = function() {
 		switchNavBarBtn(btn);
+	}
+}
+
+function setScroll(bool){
+	if (bool){
+		document.body.classList.add("active");
+	}
+	else{
+		document.body.classList.remove("active");
 	}
 }
 
@@ -58,9 +67,9 @@ for (var i = closeDescriptionButtons.length - 1; i >= 0; i--) {
 	}
 }
 
-// overlay.onclick = function(){
-// 	closeDescription();
-// }
+overlay.onclick = function(){
+	closeDescription();
+}
 
 function openDescription(description){
 	if (description == null) return;
@@ -68,7 +77,8 @@ function openDescription(description){
 	currentDescription = description;
 	description.classList.add('active');
 	overlay.classList.add('active');
-	reloadVideos();
+	setScroll(false);
+	// reloadVideos();
 }
 
 function closeDescription(){
@@ -76,8 +86,8 @@ function closeDescription(){
 
 	currentDescription.classList.remove('active');
 	overlay.classList.remove('active');
-
-	stopVideos();
+	setScroll(true);
+	// stopVideos();
 }
 
 //Instantiation des jeux sur la page de sélection
