@@ -53,3 +53,9 @@ body  {
 #A-PROPOS{
 	top: 30vh;
 }
+
+@media (max-aspect-ratio: 1/1){
+	#A-PROPOS{
+		top:45vh;
+	}
+}

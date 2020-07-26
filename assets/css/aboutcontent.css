@@ -35,7 +35,8 @@
 
 @media (max-aspect-ratio: 1/1){
 	#apropos-content{
-		left: 2vw;
+		top: 60vh;
+		left: 2.5vw;
 		width: 95%;
 		height: 105vh;
 	}

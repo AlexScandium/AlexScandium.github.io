@@ -13,7 +13,6 @@
 	justify-content: space-around;
 }
 
-
 @media (min-aspect-ratio: 1/1){
 	#p1-Intro, #p1-Nmae, #p1-Title{
 		width: 80%;
@@ -43,7 +42,10 @@
 
 @media (max-aspect-ratio: 1/1){
 	#accueil-content{
-		top:15vh;
+		left:2.5vw;
+		top:20vh;
+		width: 95%;
+		height: 60vh;
 	}
 
 	#p1-Intro, #p1-Nmae, #p1-Title{
@@ -59,7 +61,7 @@
 	}
 
 	#p1-Intro{
-		padding-top: 10vh;
+		padding-top: 5vh;
 	}
 
 	#p1-Name{
@@ -72,7 +74,7 @@
 
 	.link-area{
 		width: 30vh;
-		padding-bottom: 6vh;
+		padding-bottom: 3vh;
 	}
 }
 
