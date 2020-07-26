@@ -34,8 +34,13 @@
 }
 
 @media (max-aspect-ratio: 1/1){
+	#apropos-content{
+		left: 2vw;
+		width: 95%;
+	}
+
 	#apropos-content p{
-		font-size:1.301vmax;
+		font-size:1.45vmax;
 	}
 }
 
