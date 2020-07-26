@@ -37,10 +37,11 @@
 	#apropos-content{
 		left: 2vw;
 		width: 95%;
+		height: 105vh;
 	}
 
 	#apropos-content p{
-		font-size:1.45vmax;
+		font-size: 1.8vmax;
 	}
 }
 
