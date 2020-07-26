@@ -1,11 +1,48 @@
+@media (min-aspect-ratio: 1/1){
+	#jeux-content{
+		top: 31vh;
+		left: 12.5vw;
+
+		width: 70vw;
+		height: 70vh;
+	}
+
+	.gameiconarea{
+		width: 12vmin;
+		height: 12vmin;
+	}
+
+	.game-title{
+		width: 230%;
+		font-size: 1.2vmax;
+	}
+}
+
+@media (max-aspect-ratio: 1/1){
+	#jeux-content{
+		top:45vh;
+		left: 2.5vw;
+
+		width: 95%;
+		height: 40vh;
+	}
+
+	.gameiconarea{
+		width: 8vmin;
+		height: 8vmin;
+	}
+
+	.game-title{
+		width: 155%;
+		font-size: 1.5vmax;
+	}
+}
+
 #jeux-content{
 	position: relative;
 
-	width: 70vw;
-	height: 70vh;
 	background-color: rgba(87, 55, 105, 0.59);
-	top: 31vh;
-	left: 12.5vw;
+	
 	margin-bottom: 14vh;
 
 	display: grid;
@@ -18,8 +55,6 @@
 
 .gameiconarea{
 	justify-self: center;
-	width: 8vmin;
-	height: 8vmin;
 
 	display: flex;
 	justify-content: space-between;
@@ -34,48 +69,33 @@
 .gameiconarea:hover{
 	transform: scale(1.2);
 	transition: all 0.5s ease-out;
-
 }
+
+.game-vignette{
+	width: 80%;
+	height: 80%;
+
+	border-radius: 25%;
+	box-shadow: 0vmax 0vmax 0.75vmax 0.1vmax #050505;
+	
+	transition: all 0.5s ease-out;
+}
+
 .gameiconarea:hover .game-vignette{
 	box-shadow: 0vmax 0vmax 0.5vmax 0.1vmax #f5f5f5;
 	transition: all 0.5s ease-out;
 }
 
-.game-vignette{
-	box-shadow: 0vmax 0vmax 0.75vmax 0.1vmax #050505;
-	transition: all 0.5s ease-out;
-	width: 80%;
-	height: 80%;
-	border-radius: 25%;
-	background-color: red;
-}
-
 .game-title{
-	width: 230%;
 	margin: 0;
 	margin-top: 10%;
 
 	font-family: "Lato";
-	font-size: 1.2vmax;
 	font-weight: black;
 	color: #f5f5f5;
 
 	text-align: center;
 	text-shadow: 1px 1px 2px black;
-}
-
-@media (max-aspect-ratio : 1/1){
-	#jeux-content{
-		top:45vh;
-		left: 2.5vw;
-		width: 95%;
-		height: 40vh;
-	}
-
-	.game-title{
-		width: 155%;
-		font-size: 1.5vmax;
-	}
 }
 
 #game1{
