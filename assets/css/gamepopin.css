@@ -171,8 +171,8 @@
 .slideshowImagesContainer{
 	position: relative;
 	border: 0.5vmax solid #f5f5f5;
-	width: 70vw;
-	height: 40vw;
+	width: 50.5vw;
+	height: 28vw;
 
 	display: flex;
 	justify-content: center;
@@ -190,7 +190,7 @@
 
 .button-container button{
 	opacity: 0.8;
-	width: 5vw;
+	width: 3vw;
 	font-size: 1.8vmax;
 	font-weight:bold;
 	border-style: none;
