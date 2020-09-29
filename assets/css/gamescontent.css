@@ -8,8 +8,8 @@
 	}
 
 	.gameiconarea{
-		width: 12vmin;
-		height: 12vmin;
+		width: 15vmin;
+		height: 15vmin;
 	}
 
 	.game-title{
@@ -60,6 +60,8 @@
 	justify-content: space-between;
 	align-items: center;
 	flex-direction: column;
+
+	margin: 2.5vmin;
 
 	transform: scale(1); 
 	transition: all 0.5s ease-out;
