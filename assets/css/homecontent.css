@@ -5,14 +5,16 @@
 
 		top: 15.5vh;
 		left: 12.5vw;
+
+		justify-content: center;
 	}
 
-	#p1-Intro, #p1-Nmae, #p1-Title{
+	#p1-Name, #p1-Title{
 		width: 80%;
 	}
 
 	#p1-Name{
-		font-size: 5vw;
+		font-size: 6vw;
 	}
 }
 
@@ -23,14 +25,12 @@
 
 		top:20vh;
 		left:2.5vw;
+
+		justify-content: space-evenly;
 	}
 
-	#p1-Intro, #p1-Nmae, #p1-Title{
+	#p1-Name, #p1-Title{
 		width: 95%;
-	}
-
-	#p1-Intro{
-		padding-top: 5vh;
 	}
 
 	#p1-Name{
@@ -50,22 +50,28 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-around;
-}
-
-#p1-Intro, #p1-Title{
-	margin: 0px;
-
-	font-family: "Julius Sans One";
-	font-size: 3vmax;
-	text-align: center;
-	color: #f5f5f5;
 }
 
 #p1-Name{
 	font-family: "Montserrat";
 	text-align: center;
+
 	margin: 0px;
+	margin-bottom: 2.5%;
+
+	color: #f5f5f5;
+}
+
+
+#p1-Title{
+	
+	font-family: "Julius Sans One";
+	font-size: 3vmax;
+	text-align: center;
+
+	margin: 0px;
+	margin-bottom: 5%;
+
 	color: #f5f5f5;
 }
 
