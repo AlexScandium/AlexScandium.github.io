@@ -42,6 +42,9 @@
 	#game7{
 		grid-area: 3 / 3 / 4 / 4;
 	}
+	#game8{
+		grid-area: 3 / 4 / 4 / 5;
+	}
 }
 
 @media (max-aspect-ratio: 1/1){
@@ -87,6 +90,9 @@
 	}
 	#game7{
 		grid-area: 4 / 1 / 5 / 2;
+	}
+	#game8{
+		grid-area: 4 / 2 / 5 / 3;
 	}
 }
 
