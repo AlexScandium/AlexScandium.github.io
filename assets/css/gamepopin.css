@@ -19,6 +19,7 @@
 	}
 
 	.primary-infos p{
+		max-width: 60%;
 		/*width: 40%;
     	text-align: center;*/
 	}
