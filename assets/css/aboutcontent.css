@@ -3,7 +3,7 @@
 		top: 60vh;
 		left: 2.5vw;
 		width: 95%;
-		height: 105vh;
+		/*height: 105vh;*/
 	}
 
 	#apropos-content p{
@@ -16,7 +16,7 @@
 		top:45vh;
 		left: 12.5vw;
 		width: 70vw;
-		height: 70vh;
+		height: 72vh;
 	}
 
 	#apropos-content p{
@@ -38,7 +38,7 @@
 
 @media (min-aspect-ratio: 16/9){
 	#apropos-content p{
-		font-size:1.1vmax;
+		font-size:1.05vmax;
 	}
 }
 
@@ -47,12 +47,6 @@
 
 	background-color: rgba(87, 55, 105, 0.59);
 	margin-bottom: 14vh;
-}
-
-@-moz-document url-prefix(){
-    #apropos-content{
-    	margin-bottom: 58vh
-    }
 }
 
 #apropos-content img{

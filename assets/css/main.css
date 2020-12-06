@@ -83,4 +83,14 @@ body  {
 	#A-PROPOS{
 		top:45vh;
 	}
+
+	.page-content{
+		margin-bottom: 60vh;
+	}
+}
+
+@media (min-aspect-ratio: 1/1){
+	.page-content{
+		margin-bottom: 44vh;
+	}
 }
